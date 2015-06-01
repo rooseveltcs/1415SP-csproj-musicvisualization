@@ -1,0 +1,25 @@
+package tests;
+
+public class TestTest {
+	private static Robot AARON;
+	
+	public static void main(String[] args) {
+		AARON = new Robot("Aaron");
+	}
+	
+	private class Robot {
+		private String name;
+		
+		public Robot(String name) {
+			this.name = name;
+		}
+		
+		public String getName() {
+			return name;
+		}
+		
+		public void talk() {
+			System.out.println("Beep-Beep Boop");
+		}
+	}
+}
