@@ -4,6 +4,8 @@ import java.awt.GridBagLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 
 public class MainFrame extends JFrame {
@@ -16,6 +18,18 @@ public class MainFrame extends JFrame {
 	{
 		setTitle("Music player");
 		setSize(600, 400);
+		
+		try { //this block of code sets the style to whatever matches the operating system
+	        UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+	    } catch (ClassNotFoundException e) {
+	        e.printStackTrace();
+	    } catch (InstantiationException e) {
+	        e.printStackTrace();
+	    } catch (IllegalAccessException e) {
+	        e.printStackTrace();
+	    } catch (UnsupportedLookAndFeelException e) {
+	        e.printStackTrace();
+	    }
 		
 		JPanel panel = (JPanel)getContentPane();
 		panel.setLayout(new GridBagLayout());
