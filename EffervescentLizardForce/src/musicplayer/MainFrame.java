@@ -7,12 +7,15 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
+import filesystem.FileDisplayPanel;
+import filesystem.QueuePanel;
+
 
 public class MainFrame extends JFrame {
 	
 	MainPanel mainPanel;
 	PlayerPanel playerPanel;
-	QueuePanel queuePanel;
+	public FileDisplayPanel queuePanel;
 	
 	public MainFrame () //initializing stuff here
 	{
@@ -43,7 +46,7 @@ public class MainFrame extends JFrame {
 		constraints.gridy = 0;
 		constraints.gridheight = 2;
 		constraints.gridwidth = 1;
-		panel.add(queuePanel = new QueuePanel(), constraints); //adding it
+		panel.add(queuePanel = new FileDisplayPanel(10),constraints); //adding it
 
 		constraints.fill = GridBagConstraints.BOTH;
 		constraints.weightx = 1;
