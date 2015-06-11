@@ -8,7 +8,6 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 import filesystem.FileDisplayPanel;
-import filesystem.QueuePanel;
 
 
 public class MainFrame extends JFrame {
